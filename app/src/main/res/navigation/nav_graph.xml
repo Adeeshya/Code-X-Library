@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.codexlibrary.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/myBooksFragment2"
+        android:name="com.example.codexlibrary.MyBooksFragment"
+        android:label="fragment_my_books"
+        tools:layout="@layout/fragment_my_books" />
+    <fragment
+        android:id="@+id/notificationsFragment2"
+        android:name="com.example.codexlibrary.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/EBooksFragment2"
+        android:name="com.example.codexlibrary.EBooksFragment"
+        android:label="fragment_e_books"
+        tools:layout="@layout/fragment_e_books" />
+    <fragment
+        android:id="@+id/accountFragment2"
+        android:name="com.example.codexlibrary.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+</navigation>
