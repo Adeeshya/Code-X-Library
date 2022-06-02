@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardAdminActivity">
+    <!--toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp">
+
+        <TextView
+            android:id="@+id/iconIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Code X Library"
+            android:textColor="@color/primary_blue1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/usernameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="useremail"
+            android:textColor="@color/text_gray1" />
+
+        <ImageButton
+            android:id="@+id/profilePic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/myprofile2" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/addbookTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a Book"
+        android:layout_below="@id/toolbarRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+    <ImageButton
+        android:id="@+id/addbookBtn"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/addbookTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/add_abook2"
+        android:padding="10dp" />
+    <TextView
+        android:id="@+id/addebookTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add an E Book"
+        android:layout_below="@id/addbookBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+    <ImageButton
+        android:id="@+id/addebookBtn"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/addebookTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/add_a_ebook"
+        android:padding="10dp" />
+
+
+
+    <!--bottom layout-->
+    <RelativeLayout
+        android:id="@+id/bottomRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_bottom_tollbar">
+
+
+
+            <ImageButton
+                android:id="@+id/homeBtn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/ic_baseline_home_24"/>
+
+            <ImageButton
+                android:id="@+id/accountBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/ic_baseline_person_24"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
