@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backnotification"
+    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+            <ImageView
+                android:id="@+id/successmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/successmark"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                />
+
+            <TextView
+                android:id="@+id/messageTv"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/successmark"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:text="You have added"
+                android:textSize="12dp"/>
+
+                <!--book title-->
+                <TextView
+                    android:id="@+id/booktitleTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/messageTv"
+                    android:layout_centerVertical="true"
+                    android:text="book Title"
+                    android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/message2Tv"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/booktitleTv"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:maxLines="1"
+                android:text="to Read Later List"
+                android:textSize="12dp"/>
+
+
+
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
