@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".LoginUserActivity">
+
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/universitytxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iconIv"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:text="Welcome to University of CODE X Library"
+        android:textColor="@color/primary_blue1"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/universitytxt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/universitytxt1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:text="Explore Your Wisdom"
+        android:textColor="@color/text_gray1"
+        android:textSize="17dp" />
+
+
+    <!--university id text-->
+    <TextView
+        android:id="@+id/universityIdTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/universitytxt2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="University ID"
+        android:textColor="@color/text_gray1"
+        android:textSize="18dp" />
+
+    <!--university id-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/universityIdTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/universityIdTv"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/universityIdEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn2"
+            android:drawablePadding="10dp"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--password id text-->
+    <TextView
+        android:id="@+id/passwordTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/text_gray1"
+        android:textSize="18dp"
+        android:layout_below="@+id/universityIdTil"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <!--password id-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordTv"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn2"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/signInBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordTil"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_btn3"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+</RelativeLayout>
