@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/background2"
+        android:layout_marginBottom="50dp"
+        android:color="@android:color/transparent"
+    >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:id="@+id/booktitleRl"
+            android:padding="5dp"
+            android:layout_marginTop="10dp">
+
+            <!--book title-->
+            <TextView
+                android:id="@+id/booktitleTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Title : "
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/booktitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/booktitleTv1"
+                android:text=" Title "
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:id="@+id/bookidRl"
+            android:padding="5dp"
+            android:layout_below="@+id/booktitleRl"
+            android:layout_marginTop="10dp">
+
+            <!--book id-->
+            <TextView
+                android:id="@+id/bookidTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book ID : "
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bookidTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/bookidTv1"
+                android:text=" ID "
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/borrowdateRl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookidRl"
+        android:layout_marginStart="25dp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+
+        <!--borrowdate-->
+        <TextView
+            android:id="@+id/borrowdateTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Borrow Date : "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/borrowdateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/borrowdateBtn"
+            android:background="@drawable/edit_text3"
+            android:text="DD MM YYYY"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/borrowdateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/ic_baseline_calendar_today_24" />
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:id="@+id/returndateRl"
+            android:padding="5dp"
+            android:layout_below="@+id/borrowdateRl"
+            android:layout_marginTop="10dp">
+
+            <!--returndate-->
+            <TextView
+                android:id="@+id/returndateTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Return Date : "
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/returndateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_toStartOf="@id/returndateBtn"
+                android:background="@drawable/edit_text3"
+                android:padding="5dp"
+                android:text="DD MM YYYY"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/returndateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/ic_baseline_calendar_today_24" />
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_below="@+id/returndateRl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            >
+
+            <Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/cancelBtn"
+                android:background="@drawable/shape_btn7"
+                android:text="Confirm"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/shape_btn6"
+                android:text="Cancel"
+                android:textColor="@color/gray02" />
+        </RelativeLayout>
+
+</RelativeLayout>

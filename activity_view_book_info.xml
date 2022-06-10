@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="isData"
+            type="com.example.libraryappcodex.model.ModelBook1" />
+
+
+    </data>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:context=".view.ViewBookInfoActivity">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginStart="20dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="20dp">
+
+           <ImageView
+               android:id="@+id/bookImage"
+               android:layout_width="300dp"
+               android:layout_height="350dp"
+               android:layout_centerHorizontal="true"
+               android:imageUrl="@{isData.url}" />
+           <!--book title-->
+           <TextView
+               android:id="@+id/titleTv1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/bookImage"
+               android:layout_marginStart="20dp"
+               android:layout_marginTop="20dp"
+               android:text="Title : "
+               android:textColor="@color/primary_blue1" />
+
+           <TextView
+               android:id="@+id/titleTv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/bookImage"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="20dp"
+               android:layout_toRightOf="@+id/titleTv1"
+               android:text="@{isData.title}"
+               android:textColor="@color/primary_blue1" />
+
+           <!--book Authors-->
+           <TextView
+               android:id="@+id/AuthorsTv1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/titleTv"
+               android:layout_marginStart="20dp"
+               android:layout_marginTop="5dp"
+               android:text="Authors : "
+               android:textColor="@color/primary_blue1" />
+
+           <TextView
+               android:id="@+id/AuthorsTv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/titleTv"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="5dp"
+               android:layout_toRightOf="@+id/AuthorsTv1"
+               android:text="@{isData.authors}"
+               android:textColor="@color/primary_blue1" />
+
+
+           <!--book publish date-->
+           <TextView
+               android:id="@+id/publishdateTv1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/AuthorsTv"
+               android:layout_marginStart="20dp"
+               android:layout_marginTop="5dp"
+               android:text="Publish Date : "
+               android:textColor="@color/primary_blue1" />
+
+           <TextView
+               android:id="@+id/publishdateTv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/AuthorsTv"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="5dp"
+               android:layout_toRightOf="@+id/publishdateTv1"
+               android:text="@{isData.publishedDate}"
+               android:textColor="@color/primary_blue1" />
+
+           <TextView
+               android:id="@+id/descriptionTv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/publishdateTv"
+               android:layout_marginStart="20dp"
+               android:layout_marginTop="20dp"
+               android:text="@{isData.description}"
+               android:textColor="@color/gray02" />
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/descriptionTv"
+               android:layout_marginTop="20dp"
+               >
+
+               <Button
+                   android:id="@+id/reserveBtn"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginEnd="20dp"
+                   android:background="@drawable/shape_btn5"
+                   android:fontFamily="sans-serif"
+                   android:padding="15dp"
+                   android:text="Reserve"
+                   android:textColor="@color/white" />
+
+           <Button
+               android:id="@+id/readlaterBtn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="10dp"
+               android:layout_toLeftOf="@id/reserveBtn"
+               android:background="@drawable/shape_btn4"
+               android:fontFamily="sans-serif"
+               android:padding="15dp"
+               android:text="Read Later"
+               android:textColor="@color/gray02" />
+
+           <TextView
+               android:id="@+id/availibilityTv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginEnd="30dp"
+               android:layout_toLeftOf="@id/readlaterBtn"
+               android:text="Available"
+               android:textColor="@color/primary_blue1"
+               android:textSize="15dp" />
+
+               <TextView
+                   android:id="@+id/dateTv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/availibilityTv"
+                   android:layout_toLeftOf="@id/readlaterBtn"
+                   android:layout_toRightOf="@+id/calender"
+                   android:text="8|10"
+                   android:textColor="@color/gray02"
+                   android:textSize="15dp" />
+
+           <ImageView
+               android:id="@+id/calender"
+               android:layout_width="35dp"
+               android:layout_height="35dp"
+               android:layout_marginTop="10dp"
+               android:layout_toLeftOf="@id/availibilityTv"
+               android:src="@drawable/ic_baseline_calendar_today_24" />
+
+           </RelativeLayout>
+
+       </RelativeLayout>
+
+
+       <!--bottom layout-->
+       <RelativeLayout
+           android:id="@+id/bottomRl"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:background="@drawable/shape_bottom_tollbar">
+
+           <LinearLayout
+               android:id="@+id/bottomLl"
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="15dp"
+
+               >
+               <ImageButton
+                   android:id="@+id/homeBtn"
+                   android:layout_width="45dp"
+                   android:layout_height="45dp"
+                   android:layout_marginStart="25dp"
+                   android:background="@drawable/ic_baseline_home_24"/>
+               <ImageButton
+                   android:id="@+id/mybooksBtn"
+                   android:layout_width="45dp"
+                   android:layout_height="45dp"
+                   android:layout_marginStart="25dp"
+                   android:background="@drawable/ic_baseline_menu_book_24"/>
+               <ImageButton
+                   android:id="@+id/notificationsBtn"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_marginStart="25dp"
+                   android:background="@drawable/ic_baseline_notifications_active_24"/>
+               <ImageButton
+                   android:id="@+id/ebooksBtn"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_marginStart="25dp"
+                   android:background="@drawable/ic_baseline_library_books_24"/>
+               <ImageButton
+                   android:id="@+id/accountBtn"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_marginStart="25dp"
+                   android:background="@drawable/ic_baseline_person_24"/>
+
+           </LinearLayout>
+
+       </RelativeLayout>
+
+   </RelativeLayout>
+
+</layout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="isBooks"
+            type="com.example.libraryappcodex.model.ModelReadLaterBooks" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:contentPadding="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background2"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/successmark"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/bookRl"
+                android:layout_width="100dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:background="@color/gray02">
+
+                <!--book view-->
+                <ImageView
+                    android:id="@+id/bookView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imageUrl="@{isBooks.url}" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/booktitleRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/bookRl">
+
+                <!--book title-->
+                <TextView
+                    android:id="@+id/booktitleTv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Title : "
+                    android:textColor="@color/black"
+                    android:textSize="13dp"/>
+
+                <!--book title-->
+                <TextView
+                    android:id="@+id/booktitleTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/booktitleTv1"
+                    android:layout_marginStart="10dp"
+                    android:maxLines="1"
+                    android:text="@{isBooks.booktitle}"
+                    android:textSize="13dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bookidRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/booktitleRl"
+                android:layout_toEndOf="@+id/bookRl">
+
+                <!--book id-->
+                <TextView
+                    android:id="@+id/bookidTv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Book ID : "
+                    android:textSize="13dp"/>
+
+                <!--book id-->
+                <TextView
+                    android:id="@+id/bookidTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/bookidTv1"
+                    android:layout_marginStart="10dp"
+                    android:maxLines="1"
+                    android:text="@{isBooks.bookid}"
+                    android:textSize="13dp"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/reserveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookidRl"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/bookRl"
+                android:background="@drawable/shape_btn7"
+                android:text="Reserve"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
